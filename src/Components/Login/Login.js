@@ -12,9 +12,9 @@ export const Login = () => {
     const {userData, setUserData} = useContext(UserContext);
     const [userDetail, setUserDetail] = useState({email: '', password: ''})
     const [userLimitCount, setUserLimitCount] = useState(0)
-    console.log('Login page==>', userData.length,  userData)
+    console.log('SignUP Data on Login Page==>', userData.length,  userData)
+
     const handleSubmit = (event) => {
-        let count = 0
         event.preventDefault()
         const {username, password } = event.target.elements
         if (userData.length > 0 && userLimitCount < 3) {
@@ -45,16 +45,7 @@ export const Login = () => {
         }
 
     }
-      // console.log('EVENT==>', {username: username.value, password: password.value })
 
-    // const setUserEmail = (e) => {
-    //     setUserDetail({...userDetail, email: e.target.value})
-    // }
-    // const setUserPassword = (e) => {
-    //     setUserDetail({...userDetail,  password: e.target.value})
-    // }
-
-    console.log('USER DET==>', userDetail)
     return(
         <>
             <div className={'mt-[10%]'}>

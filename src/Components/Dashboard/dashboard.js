@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from "react"
 import {UserContext} from "../../Context/appContext";
 import {useNavigate} from "react-router-dom";
 import {Header} from "../header";
+import Blog from "../crud";
 
 
 export const Dashboard  = () => {
@@ -11,7 +12,7 @@ export const Dashboard  = () => {
         <div>
             <div> </div>
             <Header />
-            <h1> Welcome !!</h1>
+            <Blog />
         </div>
     )
 
