@@ -1,5 +1,5 @@
 import React from "react"
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 export const Header  = () => {
@@ -14,7 +14,7 @@ export const Header  = () => {
             <div>
                 <ul className={'flex text-[white] gap-4'}>
                     <li className={'text-2xl'}>
-                        Home
+                        <Link to={"/crypto-exchange"}> Crypto Deal </Link>
                     </li>
                     <li className={'text-2xl '}>
                         Contact

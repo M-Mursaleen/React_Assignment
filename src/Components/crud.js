@@ -1,5 +1,5 @@
 import React, { useState} from "react"
-import {Button, Modal, Table, Form, Input, Popconfirm, InputNumber } from "antd";
+import {Button, Modal, Table, Form, Input, Popconfirm } from "antd";
 import { PlusOutlined } from '@ant-design/icons';
 
 import 'antd/dist/reset.css';
