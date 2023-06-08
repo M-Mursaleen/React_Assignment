@@ -2,7 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Routes, Route } from "react-router-dom";
 
-import React, {useContext} from "react";
+import React from "react";
 import { Provider } from 'react-redux';
 
 import {SignUp} from "./Components/SignUp/signUp";
@@ -15,7 +15,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import {Dashboard} from "./Components/Dashboard/dashboard";
 import store from "./redux/store";
 import TransferData from "./Components/currencyConverter/RowData";
-import Protected from "./ProtectedRoute";
 import ProtectedRoute from "./ProtectedRoute";
 
 const CryptoExchange = React.lazy(() => import('./Components/crypto/crypto'));
