@@ -1,11 +1,15 @@
-import React from "react"
+import React, {useContext} from "react"
 import {Link, useNavigate} from "react-router-dom";
+import {UserContext} from "../Context/appContext";
+import LoggedInContext from "../Context/loggedInContext";
 
 
 export const Header  = () => {
     const history = useNavigate()
+    const { setIsLoggedIn } = useContext(LoggedInContext);
     function signout() {
         localStorage.removeItem("loginData");
+        setIsLoggedIn(false)
         history('/login')
     }
 
@@ -14,7 +18,7 @@ export const Header  = () => {
             <div>
                 <ul className={'flex text-[white] gap-4'}>
                     <li className={'text-2xl'}>
-                        <Link to={"/crypto-exchange"}> Crypto Deal </Link>
+                        <Link style={{ textDecoration: 'none', color: 'white'}} to={"/crypto-exchange"}> Crypto Wallet </Link>
                     </li>
                     <li className={'text-2xl '}>
                         Contact

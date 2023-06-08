@@ -2,12 +2,14 @@ import React, { useState, useContext} from "react"
 import {UserContext} from "../../Context/appContext";
 import {toast} from "react-toastify";
 import {useNavigate} from "react-router-dom";
+import LoggedInContext from "../../Context/loggedInContext";
 
 
 export const Login = () => {
     const history = useNavigate();
 
     const {userData, setUserData} = useContext(UserContext);
+    const { setIsLoggedIn } = useContext(LoggedInContext);
     const [userDetail, setUserDetail] = useState({email: '', password: ''})
     const [userLimitCount, setUserLimitCount] = useState(0)
     console.log('SignUP Data on Login Page==>', userData.length,  userData)
@@ -19,6 +21,7 @@ export const Login = () => {
             if (username.value === userData[0].userName && password.value === userData[0].password){
                 setUserDetail({username: username.value, password: password.value })
                 localStorage.setItem("loginData", JSON.stringify({username: username.value }) )
+                setIsLoggedIn(true)
                 history('/home')
             }
 
