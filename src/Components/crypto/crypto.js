@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {fetchData} from "../../redux/actions/fetchCoinsActions";
 import {purchasedMoreCoins} from "../../redux/reducers/coinDataReducer";
 import {storeCurrencyData} from "../../redux/reducers/convertCoinReducer";
-import {useNavigate, useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const CryptoExchange = () => {
     const history = useNavigate();
@@ -17,7 +17,6 @@ const CryptoExchange = () => {
         },[])
 
     const handleButtonClick = (rowData) => {
-        const {symbol, amount} = rowData
         dispatch(storeCurrencyData(rowData))
         history('/transfer');
 

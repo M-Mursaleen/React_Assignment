@@ -1,7 +1,4 @@
 import React, {useState, createContext, useEffect} from "react";
-import App from "../App";
-
-
 
 export const UserContext = createContext();
 
