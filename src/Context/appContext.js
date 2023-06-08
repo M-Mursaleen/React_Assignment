@@ -1,4 +1,5 @@
 import React, {useState, createContext, useEffect} from "react";
+import App from "../App";
 
 
 
@@ -13,6 +14,7 @@ export const UserDataContext = ({children}) => {
     const [coinData, setCoinData] = useState()
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     console.log(userData)
 
@@ -34,6 +36,8 @@ export const UserDataContext = ({children}) => {
     const defaultContext = {
         userData,
         setUserData,
+        isLoggedIn,
+        setIsLoggedIn,
         coinData,
         error,
         loading
